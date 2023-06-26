@@ -13,6 +13,7 @@ codeunit 50100 "Compensation Post"
         if CompensationLine.FindSet() then begin
             repeat
             GenJnl.Init();
+            GenJnl.Validate("Line No.", CompensationLine."Line No.");
             GenJnl.Validate("Document No.",CompensationHeader."No.");
             GenJnl.Validate("Posting Date", CompensationHeader."Posting Date");
             GenJnl.Validate("Document Date", CompensationHeader."Document Date.");

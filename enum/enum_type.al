@@ -5,11 +5,11 @@ enum 50101 "Typee"
 
     value(0; " ")
     {
-        Caption = 'Customer';
+        Caption = '';
     }
     value(1; "Customer")
     {
-        Caption = 'Vendor';
+        Caption = 'Customer';
     }
     value(2; "Vendor")
     {

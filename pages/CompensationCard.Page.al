@@ -138,18 +138,18 @@ page 50105 "Compensation Card"
                     ApplicationArea = All;
 
                 }
-                 field("Vend. E-Mail";Rec."Vend. E-Mail")
+                field("Vend. E-Mail"; Rec."Vend. E-Mail")
                 {
                     ApplicationArea = All;
-                    
+
                 }
-                 field("Vend. Partner Type";Rec."Vend. Partner Type")
+                field("Vend. Partner Type"; Rec."Vend. Partner Type")
                 {
                     ApplicationArea = All;
-                    
+
                 }
             }
-            part("CompensationHeaderLine";"Compensation Line Sub")
+            part("CompensationHeaderLine"; "Compensation Line Sub")
             {
                 ApplicationArea = All;
                 Editable = true;
@@ -163,12 +163,15 @@ page 50105 "Compensation Card"
     {
         area(Processing)
         {
-            action(ActionName)
+            action(Post)
             {
                 ApplicationArea = All;
 
                 trigger OnAction()
+                var
+                    CompensationPost: Codeunit "Compensation Post";
                 begin
+                    CompensationPost.Code(Rec);
 
                 end;
             }

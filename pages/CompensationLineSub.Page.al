@@ -4,6 +4,7 @@ page 50101 "Compensation Line Sub"
     Caption = 'Compensation Line Sub';
     PageType = ListPart;
     SourceTable = "Compensation Line";
+    AutoSplitKey = true;
 
     layout
     {
@@ -13,12 +14,12 @@ page 50101 "Compensation Line Sub"
             {
                 field("Compensation No."; Rec."Compensation No.")
                 {
-                    Visible = false;
+                    
                     ToolTip = 'Specifies the value of the Compensation No. field.';
                 }
                 field("Line No."; Rec."Line No.")
                 {
-                    Visible = false;
+                    
                     ToolTip = 'Specifies the value of the Line No. field.';
                 }
                 field("Enum"; Rec."Enum")

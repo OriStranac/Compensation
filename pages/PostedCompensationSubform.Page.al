@@ -4,6 +4,8 @@ page 50104 "Posted Compensation Subform"
     Caption = 'Posted Compensation Subform';
     PageType = ListPart;
     SourceTable = "Posted Compensation Line";
+    AutoSplitKey = true;
+
     
     layout
     {

@@ -5,6 +5,8 @@ page 50103 "Posted Compensations"
     PageType = List;
     SourceTable = "Posted Compensation Header";
     UsageCategory = Lists;
+    AutoSplitKey = true;
+    CardPageId = "Posted Compensation Card";
     
     layout
     {

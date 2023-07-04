@@ -281,26 +281,18 @@ table 50103 "Compensation Header"
     }
 
     var
-        myInt: Integer;
+        CompensationSetup: Record "Compensation Setup";
 
     trigger OnInsert()
+    var
+        NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
-
-    end;
-
-    trigger OnModify()
-    begin
-
-    end;
-
-    trigger OnDelete()
-    begin
-
-    end;
-
-    trigger OnRename()
-    begin
-
+        if "No." = '' then begin
+            CompensationSetup.Get();
+            CompensationSetup.TestField("Compensation Nos.");
+            CompensationSetup.TestField("Posted Compensation Nos.");
+            NoSeriesMgt.InitSeries(CompensationSetup."Compensation Nos.", xRec."No. Series.", "Posting Date", "No.", "No. Series.");
+        end;
     end;
 
 }
